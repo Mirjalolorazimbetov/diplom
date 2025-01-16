@@ -1,0 +1,306 @@
+@use "../common/media.scss" as*;
+
+.search{
+    position: absolute;
+    width: 100%;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    transform: translateY(-120%);
+    transition: 0.5s;
+    
+    
+    &.active{
+     transform: translateY(0);
+     background: #007bff;
+    }
+   }
+
+.select{
+width: 120px;
+outline: none;
+
+
+@include media(1000){
+    width: 100px;
+}
+@include media(700){
+   width: 90px;
+  }
+  @include media(400){
+    width: 75px;
+   }
+}
+
+.sort{
+    &__control{
+        display: flex !important;
+       @include media(700){
+        min-height: 34px !important;
+       }
+       @include media(500){
+        min-height: 30px !important;
+       }
+       @include media(400){
+        min-height: 25px !important;
+       }
+     
+    }
+    &__indicator{
+      @include media(700){
+        width: 20px;
+        height: 20px;
+        padding: 0 2px 0 0 !important;
+      }
+    
+       &-separator{
+        @include media (700){
+            margin-bottom: 0;
+            margin-top: 0;
+            height: 0px;
+        }
+       }
+    }
+    &__placeholder{
+        @include media(900){
+            font-size: 14px;
+        }
+        @include media(600){
+            
+        }
+    }
+   
+    &__value-container{
+       @include media(900){
+        padding: 0px 5px !important;
+       }
+    }
+    &__input-container{
+        @include media(700){
+            padding: 0px !important;
+            margin: 0 !important;
+           }
+    }
+}
+
+.loader{
+    @include media(900){
+     width: 220px;
+     height: 330px;
+     
+    }
+}
+.skleton1{
+    @include media(1000){
+        width: 220px;
+        height: 220px;
+      }
+      @include media(900){
+        width: 210px;
+      height: 210px;
+      overflow: hidden;
+      }
+        @include media(700){
+          width: 200px;
+          height: 200px;
+         }
+         @include media(600){
+          width: 185px;
+          height: 180px;
+         }
+         @include media(500){
+          width: 165px;
+          height: 160px;
+         }
+         @include media(400){
+          width: 140px;
+          height: 135px;
+         }
+         @include media(360){
+          width: 130px;
+          height: 120px;
+         }
+}
+.skleton2{
+    @include media(900){
+        width: 200px;
+        transform: translateY(-15px);
+    }
+    @include media(800){
+        width: 190px;
+        transform: translateY(-17px);
+        height: 18px;
+
+    }
+     @include media(700){
+        width: 180px;
+       height: 17px;
+       border-radius: 5px;
+       transform: translateY(-28px);
+
+      }
+     @include media(600){
+        width: 160px;
+       height: 16px;
+       transform: translateY(-50px);
+      }
+      @include media(500){
+        width: 140px;
+       height: 14px;
+       transform: translateY(-70px);
+      }   
+       @include media(400){
+        width: 125px;
+       height: 12px;
+       transform: translate(-3px,-97px); 
+      }
+
+      @include media(360){
+        width: 115px;
+       height: 11px;
+       transform: translate(-5px,-110px); 
+      }
+}
+.skleton3{
+    @include media(900){
+        width: 100px;
+        height: 16px;
+        transform: translateY(-18px);
+    }
+    @include media(800){
+        width: 90px;
+        height: 15px;
+        transform: translateY(-25px);
+    }
+     @include media(700){
+        width: 100px;
+        height: 14px;
+        transform: translate(-10px,-35px);
+     }
+     @include media(600){
+        width: 100px;
+        height: 13px;
+      transform: translate(-20px,-58px);
+     }
+     @include media(500){
+        width: 100px;
+        height: 12px;
+        transform: translate(-30px,-80px); 
+     }
+     @include media(400){
+        width: 100px;
+        transform: translate(-40px,-110px); 
+     }
+     @include media(360){
+        transform: translate(-48px,-122px); 
+        height: 11px;
+     }
+} 
+.skleton4{
+    @include media(900){
+        width: 150px;
+        transform: translateY(-20px);
+    }
+    @include media(800){
+        transform: translate(-8px,-30px); 
+    }
+     @include media(700){
+        transform: translate(-10px,-40px); 
+     }
+     @include media(600){
+        height: 13px;
+        transform: translate(-20px,-65px); 
+     }
+     @include media(500){
+        transform: translate(-30px,-90px); 
+     }
+     @include media(400){
+        width: 140px;
+        transform: translate(-36px,-120px); 
+     }
+     @include media(360){
+        width: 130px;
+        transform: translate(-40px,-132px); 
+        height: 11px;
+     }
+}
+.skleton5{
+    @include media(1000){
+        width: 36px;
+        height: 15px;
+        transform: translate(1px,-20px);
+    }
+    @include media(900){
+        width: 36px;
+        transform: translate(1px,-30px);
+    }
+    @include media(800){
+        width: 34px;
+        height:  14px;
+        transform: translate(5px,-50px);
+    }
+    @include media(700){
+        width: 32px;
+        height:  13px;
+        transform: translate(10px,-65px);
+    }
+    @include media(600){
+        width: 30px;
+        transform: translate(11px,-85px);
+    } 
+      @include media(500){
+        width: 28px;
+       height :12px;
+       transform: translate(12px,-110px);
+    }
+    @include media(400){
+        width: 26px;
+       height: 11px;
+        transform: translate(10px,-130px);
+    }
+    @include media(360){
+        width: 24px;
+       height: 11px;
+        transform: translate(5px,-160px);
+    }
+    
+}
+.skleton6{
+    @include media(1000){
+        width: 50px;
+        height: 15px;
+        transform: translate(20px,-20px);
+    }
+    @include media(900){
+        width: 45px;
+        transform: translate(5px,-30px);
+    }
+    @include media(800){
+        width: 40px;
+        height:  14px;
+        transform: translate(5px,-50px);
+    }
+    @include media(700){
+        height:  13px;
+        transform: translate(0px,-65px);
+    }
+    @include media(600){
+        width: 35px;
+        transform: translate(-30px,-85px);
+    } 
+      @include media(500){
+        width: 30px;
+       height :12px;
+       transform: translate(-40px,-110px);
+    }
+    @include media(400){
+        width: 26px;
+       height: 11px;
+        transform: translate(-50px,-130px);
+    }
+    @include media(360){
+       
+       height: 11px;
+        transform: translate(-70px,-160px);
+    }  
+}

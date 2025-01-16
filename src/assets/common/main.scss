@@ -1,0 +1,684 @@
+@use "../common/common.scss" as*;
+@use "../common/sort.scss" as*;
+@use "../common/media.scss" as*;
+@use "../common/font.scss" as*;
+
+
+.nav{
+  background-color: #007bff;
+  margin-bottom: 20px;
+  @include media(600){
+    margin-bottom: 15px;
+  }
+
+   &_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    @include media(600){
+      padding: 6px;
+    }
+    @include media(400){
+      padding: 3px;
+    }
+
+    & input{
+      background: unset;
+      width: 100%;
+      font-size: 17px;
+      font-weight: 400px;
+      color: #000;
+      position: relative;
+      text-decoration-skip-ink: none;
+      border: none;
+      outline: none; 
+      @include media(800){
+        font-size: 16px;
+      } 
+      @include media(700){
+        font-size: 15px;
+      }
+      @include media(500){
+        font-size: 14px;
+      }
+      @include media(400){
+        font-size: 13px;
+      }
+    }
+    .arrov_back{
+      @include media(700){
+        font-size: 18px;
+      }
+      @include media(500){
+        font-size: 17px;
+      }
+    }
+    .clear{
+      @include media(700){
+        font-size: 18px;
+      }
+      @include media(500){
+        font-size: 17px;
+      }
+    }
+    .btn_search{
+      font-size: 20px;
+      @include media(900){
+        font-size: 19px;
+      }
+      @include media(800){
+        font-size: 18px;
+      }
+      @include media(700){
+        font-size: 17px;
+      }
+      @include media(600){
+        font-size: 16px;
+      }
+      @include media(500){
+        font-size: 15px;
+      }
+    }
+   
+   }
+    .fire{
+      font-size: 20px;
+      @include media(900){
+        font-size: 19px;
+      }
+      @include media(800){
+        font-size: 18px;
+      }
+      @include media(700){
+        font-size: 17px;
+      }
+      @include media(600){
+        font-size: 16px;
+      }
+      @include media(500){
+        font-size: 15px;
+      }
+   }
+}
+  .product{
+    display: grid;
+    grid-template-columns: repeat(4,3fr);
+    gap: 20px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+    @include media(1100){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    @include media(500){
+      gap: 10px;
+    }
+    &_card {
+      background: #0057b3fa;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      width: 250px;
+      height: 380px;
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      @include media(1000){
+        width: 240px;
+        height: 360px;
+      }
+      @include media(900){
+        width: 230px;
+      height: 350px;
+      }
+      @include media(800){
+        height: 330px;
+        }
+        @include media(700){
+          width: 220px;
+          height: 310px;
+         }
+         @include media(600){
+          width: 200px;
+          height: 285px;
+          border-radius: 8px;
+          padding: 8px;
+         }
+         @include media(500){
+          width: 180px;
+          height: 260px;
+        
+         }
+         @include media(400){
+          width: 155px;
+          height: 235px;
+          border-radius: 6px;
+          padding: 6px;
+         }
+         @include media(360){
+          width: 140px;
+          height: 200px;
+          border-radius: 5px;
+          padding: 5px;
+         }
+    }
+  
+    &_foiz{
+      background: #c71029fa ;
+      padding: 6px;
+      top: 20px;
+      left: 20px;
+      position: absolute;
+      font-size: 17px;
+      border-radius: 50%;
+      border: 2px dotted rgba(203, 202, 201, 0.841);
+      color: yellow;
+      @include media(1000){
+        font-size: 16px;
+        }
+        @include media(900){
+          font-size: 15px;
+          padding: 5px;
+          }
+          @include media(600){
+            padding: 4px;
+            font-size: 14px;
+           }
+          @include media(500){
+            padding: 3px;
+            font-size: 13px;
+            top: 15px;
+            left: 15px;
+           }
+           @include media(400){
+            font-size: 12px;
+           }
+           @include media(360){
+            font-size: 10px;
+            top: 10px;
+            left: 10px;
+           }
+    }
+    &_title{
+      font-size: 22px;
+      font-weight: 700;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; 
+      overflow: hidden;
+      @include media(1100){
+      font-size: 21px;
+      }
+      @include media(900){
+      font-size: 20px;
+      }
+      @include media(800){
+        font-size: 19px;
+        }
+        @include media(700){
+          font-size: 18px;
+         }
+        @include media(600){
+          font-size: 17px;
+          line-height: 110%;
+          -webkit-line-clamp: 1;
+         }
+         @include media(500){
+          font-size: 16px;
+         }
+         @include media(360){
+          font-size: 15px;
+         }
+    }
+
+    &_brand{
+      font-size: 20px;
+     font-weight: 500;
+     @include media(900){
+    font-size: 19px;
+    }
+    @include media(800){
+      font-size: 18px;
+      }
+      @include media(700){
+        font-size: 17px;
+       }
+      @include media(600){
+        font-size: 16px;
+        font-weight: 450;
+       }
+       @include media(500){
+        font-size: 15px;
+       }
+       @include media(360){
+        font-size: 14px;
+       }
+    
+    }
+    &_category{
+      margin-bottom: auto;
+      font-size: 19px;
+      @include media(900){
+        font-size: 18px;
+        }
+        @include media(800){
+          font-size: 17px;
+          }
+          @include media(700){
+          font-size: 16px;
+           }
+           @include media(500){
+            font-size: 15px;
+           }
+           @include media(360){
+            font-size: 14px;
+           }
+    }
+
+    
+  &_card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    background: rgba(203, 202, 201, 0.841);
+
+    @include media(600){
+      border-radius: 8px 8px 0 0;
+     }
+     @include media(400){
+      border-radius: 6px 6px 0 0;
+     }
+     @include media(360){
+      border-radius: 5px 5px 0 0;
+     }
+  }
+  .card_box{
+    display: flex;
+    justify-content: space-between;
+
+    &_stock{
+     @include media(800){
+      font-size: 15px;
+     }
+     @include media(700){
+      font-size: 14px;
+     }
+     @include media(500){
+      font-size: 13px;
+     }
+     @include media(400){
+      font-size: 12px;
+     }
+     @include media(360){
+      font-size: 11px;
+     }
+    }
+    &_price{
+      @include media(800){
+        font-size: 15px;
+       }
+       @include media(700){
+      font-size: 14px;
+       }
+       @include media(500){
+        font-size: 13px;
+       }
+       @include media(400){
+        font-size: 12px;
+       }
+       @include media(360){
+        font-size: 11px;
+       }
+    }
+    }
+}
+  .Homeid{
+   .id_card{
+    width: 320px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    background-color: #007bff;
+    border-radius: 10px;
+    padding: 10px 0 0 0;
+    box-shadow: 10px #000;
+    margin-top: 20px;
+    @include media(900){
+     height: 570px;
+    }
+    @include media(800){
+      height: 560px;
+    }
+    @include media(700){
+      height: 550px;
+    }
+    @include media(600){
+      height: 530px;
+      width: 300px;
+    }
+    @include media(500){
+      width: 290px;
+    }
+    @include media(400){
+      width: 280px;
+      height: 520px;
+      padding: 8px 0 0 0;
+    }
+    
+   }
+    .homeid_box{
+     display: flex;
+     flex:0 1 auto;
+     overflow-y: hidden;
+     overflow-x: scroll;
+     position: relative;
+     max-width: 300px;
+     background: rgba(203, 202, 201, 0.841);
+     border-radius: 10px 10px 0 0;
+     @include media(600){
+      max-width: 280px;
+      border-radius: 8px 8px 0 0;
+     }
+     @include media(500){
+      max-width: 270px;
+      border-radius: 6px 6px 0 0;
+     }
+     @include media(400){
+      max-width: 260px;
+      
+     }
+     .id_foiz{
+      background: #c71029fa ;
+      padding: 8px;
+      font-size: 17px;
+      top: 15px;
+      left: 15px;
+      position: absolute;
+      border-radius: 50%;
+      border: 2px dotted rgba(203, 202, 201, 0.841);
+      color: yellow;
+    
+      @include media(800){
+        top: 14px;
+      left: 14px;
+      font-size: 16px;
+      }
+      @include media(700){
+        top: 13px;
+        left: 13px;
+        font-size: 15px;
+        padding: 7px;
+      }
+      @include media(600){
+        top: 12px;
+        left: 12px;
+      }
+      @include media(500){
+        top: 11px;
+        left: 11px;
+        font-size: 14px;
+        padding: 6px;
+      }
+      @include media(400){
+        top: 10px;
+        left: 10px;
+        font-size: 13px;
+        padding: 5px;
+      }
+     }
+      .id_img{
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        @include media(600){
+          border-radius: 8px 8px 0 0;
+        }
+        @include media(400){
+          border-radius: 6px 6px 0 0;
+        }
+      }
+      .id_imgs{
+        max-width: 300px;
+        object-fit: cover;
+        height: 300px;
+        @include media(600){
+          max-width: 280px;
+          height: 280px;
+         }
+         @include media(400){
+          max-width: 270px;
+          height: 270px;
+         }
+      }
+    }
+    .id_title{
+     font-size: 22px;
+     @include media(900){
+      font-size: 21px;
+     }
+     @include media(700){
+      font-size: 20px;
+     }
+     @include media(600){
+      font-size: 19px;
+     }
+    }
+    .id_brand{
+     font-size: 21px;
+     font-weight: 500;
+     @include media(900){
+      font-size: 20px;
+     }
+     @include media(800){
+      font-size: 19px;
+     }
+     @include media(700){
+      font-size: 18px;
+     }
+     @include media(600){
+      font-size: 17px;
+     }
+    }
+    .id_box{
+      display: flex;
+      gap: 100px;
+     }
+    .id_stoc{
+      font-size: 18px;
+      font-weight: 600;
+      @include media(900){
+        font-size: 17px;
+      }
+      @include media(700){
+        font-size: 16px;
+      }
+      @include media(600){
+        font-size: 15px;
+      }
+    }
+    .id_price{
+      font-size: 18px;
+      font-weight: 600;
+      @include media(900){
+        font-size: 17px;
+      }
+      @include media(800){}
+      @include media(700){
+        font-size: 16px;
+      }
+      @include media(600){
+        font-size: 15px;
+      }
+    }
+    .id_rating{
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 100%;
+      @include media(700){
+        font-size: 16px;
+      }
+      @include media(600){
+        font-size: 15px;
+      }
+    }
+    .star{
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 8px;
+   
+      @include media(700){
+        font-size: 17px;
+      }
+      @include media(600){
+        font-size: 16px;
+      }
+     
+    }
+    .id_description{
+      font-weight: 400;
+      padding: 0 8px;
+      font-size: 18px;
+      text-align: justify;
+  
+      @include media(800){
+        font-size: 17px;
+      }
+      @include media(600){
+        font-size: 16px;
+      }
+      
+    }
+  }
+  .basket{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    background: #0c1ff2;
+    @include media(700){
+     gap: 3px;
+     padding: 4px 8px;
+     font-size: 17px;
+    }
+   &_title{
+      font-size: 16px;
+      font-weight: 500;
+      color:#fff;
+      @include media(800){
+        font-size: 15px;
+        font-weight: 400;
+      }
+      @include media(700){
+        font-size: 14px;
+      }
+    }
+  }
+  .error_link{
+    background-color: #007bff;
+    padding: 4px 12px;
+    border-radius: 5px;
+    top: 20px;
+    cursor: pointer;
+    position: relative;
+    @include media(600){
+     top: 15px;
+    }
+    @include media (500){
+      padding: 3px 10px;
+      font-size: 15px;
+    }
+    @include media(400){
+      top: 10px;
+      padding: 2px 8px;
+     }
+  }
+    .paginate { 
+      background: #0057b3fa;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      position: absolute;
+      z-index: 99;
+      gap: 20px;
+      @include media(700){
+        padding: 10px 0;
+      }
+      @include media(500){
+        gap: 15px;
+      }
+      @include media(400){
+        padding: 7px 0;
+      }
+      &_prev,
+      &_link,
+      &_break,
+      &_next{
+        font-size: 20px;
+        font-weight: 700;
+        user-select: none;
+        cursor: pointer;
+        color: #000;
+        padding: 3px 5px;
+        border-radius: 50%;
+        background-color: #0c1ff2;
+        @include media(800){
+          font-size: 18px;
+        }
+        @include media(600){
+          font-size: 17px;
+          padding: 2px 4px;
+        }
+        @include media(500){
+          font-size: 16px;
+        }
+        @include media(400){
+         font-size: 15px;
+        }
+      }
+      &_active{
+        color: yellow;
+        background-color: #000;
+      }
+    }
+    button {
+      padding: 6px 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0c1ff2;
+      @include media(600){
+        all: unset;
+      }
+    }
+  span{
+    color: yellow;
+    width: 20px;
+  }
+  .Error{
+    .error_box{
+      display:flex;
+      justify-content: center;
+    }
+  }
+
+
+
+  

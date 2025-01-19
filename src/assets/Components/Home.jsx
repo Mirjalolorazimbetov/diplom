@@ -43,9 +43,9 @@ const Home = () => {
     if (!products) return [];
 
     switch (order) {
-      case "product.category":
+      case "product.title":
         return [...products].sort((a, b) =>
-          a.category.localeCompare(b.category)
+          a.title.localeCompare(b.title)
         );
       case "product.stock":
         return [...products].sort((a, b) => a.stock - b.stock);

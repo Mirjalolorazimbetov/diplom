@@ -8,7 +8,7 @@ const Sort = () => {const dispatch = useDispatch()
 
     const  options = [
         {value: "", label:"default"},
-        {value: "product.category", label:"category"},
+        {value: "product.title", label:"name"},
         {value: "product.stock", label:"stock"},
         {value: "product.price", label:"price"},
     ]

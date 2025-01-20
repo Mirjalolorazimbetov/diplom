@@ -9,7 +9,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 import Paginate from './Paginate';
 import { useDebounce } from 'use-debounce';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearch } from '../stor/product';
+import { setSearch, setOffset } from '../stor/product';
 import Skleton from './Skleton';
 import Sort from './Sort';
 
@@ -17,11 +17,11 @@ import Sort from './Sort';
 const Home = () => {
   const order = useSelector((state) => state.product.order);
   const offset = useSelector((state) => state.product.offset);
-  const limit = useSelector((state) => state.product.limit); 
+  const limit = useSelector((state) => state.product.limit);
   const search = useSelector((state) => state.product.search);
   const [searchActive, setSearchActive] = useState(false);
   const [value, setValue] = useState('');
-  const [products, setProducts] = useState([]);  
+  const [products, setProducts] = useState([]);
   const skleton = [...new Array(8)].map(() => <Skleton />);
   const [debouncedValue] = useDebounce(value, 1500);
   const dispatch = useDispatch();
@@ -29,6 +29,7 @@ const Home = () => {
   useEffect(() => {
     if (debouncedValue !== search) {
       dispatch(setSearch(debouncedValue || ''));
+      dispatch(setOffset(0)); 
     }
   }, [debouncedValue, search, dispatch]);
 
@@ -37,7 +38,6 @@ const Home = () => {
       .then((res) => setProducts(res.data.products))
       .catch((error) => console.error(error));
   }, []);
-  
 
   const sortedProducts = React.useMemo(() => {
     if (!products) return [];
@@ -62,8 +62,15 @@ const Home = () => {
     );
   }, [sortedProducts, search]);
 
+  const currentProducts = React.useMemo(() => {
+    if (search) {
+      
+      return filteredProducts.slice(0, limit);
+    } else {
+      return filteredProducts.slice(offset, offset + limit);
+    }
+  }, [filteredProducts, offset, limit, search]);
 
-  const currentProducts = filteredProducts.slice(offset, offset + limit);
   return (
     <>
       <div className="nav">
@@ -133,7 +140,7 @@ const Home = () => {
               ))}
         </div>
       </div>
-      <Paginate />
+      {!search && <Paginate />}
     </>
   );
 };
